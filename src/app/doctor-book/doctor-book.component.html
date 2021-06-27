@@ -1,0 +1,27 @@
+<div class="container">
+    <h2 style="color: steelblue;">Accepted Appointments</h2>
+    <table class="table table-bordered table-striped text-center">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Patient Id</th>
+                <th>Patient Name</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of BookAppoint;let i =index">
+                <td>{{i+1}}</td>
+                <td>{{data.patientId}}</td>
+                <td>{{data.patientName}}</td>
+                <td>{{data.date}}</td>
+                <td>{{time[i]}}</td>
+                <td style="color:green;">
+                    <b>{{data.status}}</b>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,46 @@
+<h1>Hello DR.{{details.doctorName}} </h1>
+<div class="container" *ngIf="hide">
+    <h2 class="card-title">Requested For Appointments.</h2>
+    <div class="card" style="background-color: aqua;" (click)="show()">
+        <div class="card-body">
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShCBsI4ko38IBrQ2CJ4v80cMYFUH313z0nxQPyBZZ8BLKbZO_DMFEkwDuCSxn8R5wn2Po&usqp=CAU" alt="">
+            </div>
+            <br>
+            <div>
+                <h4 style="font-size: medium;">Requested appointments are <span style="color: red;">{{d}}</span></h4>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br>
+<br><br><br>
+<div class="container" *ngIf="!hide">
+    <a href="/doctorHome"><i style='font-size:20px' class='fas'>&#xf015;</i></a><br>
+    <h2>Request For Blood</h2>
+    <table class="table table-bordered table-striped text-center">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Patient Id</th>
+                <th>Patient Name</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of checked;let i =index">
+                <td>{{i+1}}</td>
+                <td>{{data.patientId}}</td>
+                <td>{{data.patientName}}</td>
+                <td>{{data.date}}</td>
+                <td>{{time[i]}}</td>
+                <td>
+                    <button class="req" (click)="acceptance(i,'Accept')" mat-raised-button color="primary">Accept</button>
+                    <button class="req" (click)="acceptance(i,'Decline')" mat-raised-button color="warn">Reject</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

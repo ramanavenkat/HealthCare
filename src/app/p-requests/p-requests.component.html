@@ -1,0 +1,32 @@
+<div class="container" *ngIf="hide">
+    <h2 style="color: steelblue;">Rejected Appointments</h2>
+    <table class="table table-bordered table-striped text-center">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Patient Id</th>
+                <th>Patient Name</th>
+                <th>Doctor Name</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of checked;let i =index">
+                <td>{{i+1}}</td>
+                <td>{{data.patientId}}</td>
+                <td>{{data.patientName}}</td>
+                <td>{{data.doctorName}}</td>
+                <td>{{data.date}}</td>
+                <td>{{time[i]}}</td>
+                <td style="color:red;">
+                    <b>{{data.status}}</b>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="container" *ngIf="!hide">
+    <h2 style="text-align: center;">No Requests are available</h2>
+</div>

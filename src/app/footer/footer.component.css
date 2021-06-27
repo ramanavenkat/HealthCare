@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+footer{
+    background-color: steelblue;
+    color: white;
+}
+.downFooter{
+    background-color: lightblue;
+    color:black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+img{
+    width:300px;
+    height:200px;
+}

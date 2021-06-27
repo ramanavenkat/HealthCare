@@ -1,0 +1,94 @@
+<nav class="navbar navbar-default">
+    <nav id="sidebar">
+        <div id="dismiss">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+        <div class="sidebar-header" *ngIf="login">
+            <a href="/login"><h3 style="color: white;">Login | Signup</h3></a>
+        </div>
+        <div class="sidebar-header" *ngIf="!login">
+            <h3>{{name}}</h3>
+        </div>
+        <ul class="list-unstyled components" *ngIf="login">
+            <li>
+                <a href="/login">Home</a>
+            </li>
+            <li>
+                <a href="/login">About</a>
+            </li>
+            <li>
+                <a href="/login">Book Appointment</a>
+            </li>
+            <li>
+                <a href="/login">Reports</a>
+            </li>
+        </ul>
+        <ul class="list-unstyled components" *ngIf="!login && admin">
+            <li>
+                <a href="/admin" >Home</a>
+            </li>
+            <li>
+                <a href="/aProfile">Profile</a>
+            </li>
+            <li class="mat">
+                <mat-form-field appearance="fill">
+                    <mat-label>Doctors</mat-label>
+                    <mat-select>
+                      <mat-option routerLink="/adminCdoctor">
+                        Add Doctor
+                      </mat-option>
+                      <mat-option routerLink="/doctorDetails">
+                          All Doctors
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field> 
+            </li>
+            <li>
+                <a href="/adminPatient">Patients</a>
+            </li>
+        </ul>
+        <ul class="list-unstyled components" *ngIf="!login && doctor">
+            <li>
+                <a href="/doctorHome">Home</a>
+            </li>
+            <li>
+                <a href="/dProfile">Profile</a>
+            </li>
+            <li>
+                <a href="/dBook">Approved Appointment</a>
+            </li>
+        </ul>
+        <ul class="list-unstyled components" *ngIf="!login && patient">
+            <li>
+                <a href="/patientHome">Home</a>
+            </li>
+            <li>
+                <a href="/pProfile">Profile</a>
+            </li>
+            <li>
+                <a href="/pRequest">Requested Appointments</a>
+            </li>
+            <li>
+                <a href="/pBook">Booked Appointment</a>
+            </li>    
+        </ul>
+        
+    </nav>  
+    <div class="color">
+        <div class="navbar-header">
+            <button type="button" class="but" id="sidebarCollapse">
+                <i class="material-icons" style="font-size:36px;color:white">menu</i>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right bb">
+                <div class="dd">
+                    <button (click)="click()" id="butt" class="btn btn-info" *ngIf="patient">Book Appointment</button>
+                    <a href="tel:180245632">
+                        <h3 class="toll">TollFree :<i class="material-icons" style="font-size:15px;color:white">local_phone</i><span style="color: white;">180-245-632</span></h3>
+                    </a>
+                </div>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,21 @@
+.group{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.card{
+    border-radius: 20px;
+    margin: 0 auto;
+    width: 500px;
+    height: auto;
+    padding: 30px;
+    border: 1px solid steelblue;
+
+}
+.card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card-body{
+    margin-top: -80px;
+    text-align: center;
+}

@@ -1,0 +1,31 @@
+<div class="container">
+    <h2 style="color: steelblue;">All Doctors Avaliable in Hosptial</h2>
+    <table class="table table-bordered table-striped text-center">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Doctor Name</th>
+                <th>Email Id</th>
+                <th>Specialization</th>
+                <th>Qualification</th>
+                <th>Mobile Number</th>
+                <th>Experience</th>
+                <th>Operation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of doctorData;let i =index">
+                <td>{{i+1}}</td>
+                <td>{{data.doctorName}}</td>
+                <td>{{data.email}}</td>
+                <td>{{data.specialization}}</td>
+                <td>{{data.qualification}}</td>
+                <td>{{data.mobileNumber}}</td>
+                <td>{{data.experience}}</td>
+                <td>
+                    <button (click)="delete(data.id)" mat-raised-button color="warn">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Welcome to Admin..</h1>
+    <div class="admin">
+        <div class="card" routerLink="/doctorDetails">
+            <div class="card-body">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUlCJrxbfhZWpx2tmSrhH91n1yJDNouKIoivpJ3bwbZwgEq-PWnxeo2CazWyPzpF4-8xs&usqp=CAU" alt="">
+            </div>
+            <div class="card-footer">
+                <br>
+                <h2 style="text-align: center;color: steelblue;">Avaliable Doctor in Hosptial :<b>{{list[0]}}</b></h2>
+            </div>
+        </div>
+        <div class="card" routerLink="/adminPatient">
+            <div class="card-body">
+                <img id="pat" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYFz8cRQyGUoH-VD_H9W6qJrv0ecOQ4hupwg&usqp=CAU" alt="">
+            </div>
+            <div class="card-footer">
+                <br>
+                <h2 style="text-align: center;color: steelblue;">Total Number Of Patient Registered in Hosptial :<b>{{list[1]-1}}</b></h2>
+            </div>
+        </div>
+    </div>
+
+
+</div>

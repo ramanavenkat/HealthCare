@@ -1,0 +1,21 @@
+.table{
+    background-color: white;
+}
+.back{
+    background-color:red;
+    color:white;
+}
+.front{
+    background-color: green;
+    color: white;
+}
+h2{
+    color: white;
+}
+.header{
+    color: white;
+}
+thead{
+    background-color: black;
+    color: white;
+}

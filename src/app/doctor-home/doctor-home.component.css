@@ -1,0 +1,30 @@
+h1{
+    margin-left: 100px;
+}
+h2{
+    margin-left: 150px;
+}
+.card{
+    margin: 0 auto;
+    padding:80px;
+    width: 400px;
+    height: 400px;
+    border:1px solid steelblue;
+    border-radius: 20px;
+}
+.card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.table{
+    background-color: white;
+}
+.header{
+    color: white;
+}
+.req{
+    margin-right:10px;
+}
+thead{
+    background-color: black;
+    color: white;
+}

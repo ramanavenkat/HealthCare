@@ -1,0 +1,31 @@
+<div class="container">
+    <h2 style="color: steelblue;">All Patient Avaliable in Hosptial</h2>
+    <table class="table table-bordered table-striped text-center">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Patient Name</th>
+                <th>Email Id</th>
+                <th>Guardian Name</th>
+                <th>Mobile Number</th>
+                <th>State</th>
+                <th>District</th>
+                <th>City</th>
+                <th>Pincode</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of details;let i =index">
+                <td>{{i+1}}</td>
+                <td>{{data.name}}</td>
+                <td>{{data.email}}</td>
+                <td>{{data.guardianName}}</td>
+                <td>{{data.mobileNumber}}</td>
+                <td>{{data.state}}</td>
+                <td>{{data.district}}</td>
+                <td>{{data.city}}</td>
+                <td>{{data.pincode}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
