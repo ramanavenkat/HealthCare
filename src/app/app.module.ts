@@ -29,6 +29,7 @@ import { PRequestsComponent } from './p-requests/p-requests.component';
 import { PBookComponent } from './p-book/p-book.component';
 import { FooterComponent } from './footer/footer.component';
 import { CheckComponent } from './check/check.component';
+import { CheckAppointmentComponent } from './check-appointment/check-appointment.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { CheckComponent } from './check/check.component';
     PRequestsComponent,
     PBookComponent,
     FooterComponent,
-    CheckComponent
+    CheckComponent,
+    CheckAppointmentComponent
   ],
   imports: [
     BrowserModule,
