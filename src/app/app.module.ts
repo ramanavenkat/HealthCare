@@ -28,6 +28,7 @@ import { DoctorProfileComponent } from './doctor-profile/doctor-profile.componen
 import { PRequestsComponent } from './p-requests/p-requests.component';
 import { PBookComponent } from './p-book/p-book.component';
 import { FooterComponent } from './footer/footer.component';
+import { CheckComponent } from './check/check.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { FooterComponent } from './footer/footer.component';
     DoctorProfileComponent,
     PRequestsComponent,
     PBookComponent,
-    FooterComponent
+    FooterComponent,
+    CheckComponent
   ],
   imports: [
     BrowserModule,
